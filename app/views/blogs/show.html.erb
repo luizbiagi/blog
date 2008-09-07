@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @blog.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @blog.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @blog.description %>
+</p>
+
+<p>
+  <b>Icon:</b>
+  <%=h @blog.icon %>
+</p>
+
+<p>
+  <b>Template:</b>
+  <%=h @blog.template_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

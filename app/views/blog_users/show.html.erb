@@ -1,0 +1,18 @@
+<p>
+  <b>Blog:</b>
+  <%=h @blog_user.blog_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @blog_user.user_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @blog_user.level %>
+</p>
+
+
+<%= link_to 'Edit', edit_blog_user_path(@blog_user) %> |
+<%= link_to 'Back', blog_users_path %>

@@ -1,0 +1,22 @@
+<h1>Listing category_posts</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Post</th>
+  </tr>
+
+<% for category_post in @category_posts %>
+  <tr>
+    <td><%=h category_post.category_id %></td>
+    <td><%=h category_post.post_id %></td>
+    <td><%= link_to 'Show', category_post %></td>
+    <td><%= link_to 'Edit', edit_category_post_path(category_post) %></td>
+    <td><%= link_to 'Destroy', category_post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category_post', new_category_post_path %>

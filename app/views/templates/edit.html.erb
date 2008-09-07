@@ -1,0 +1,20 @@
+<h1>Editing template</h1>
+
+<% form_for(@template) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :namestyle %><br />
+    <%= f.text_field :namestyle %>
+  </p>
+  <p>
+    <%= f.label :contentfile %><br />
+    <%= f.text_field :contentfile %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @template %> |
+<%= link_to 'Back', templates_path %>

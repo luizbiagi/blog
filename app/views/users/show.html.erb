@@ -1,0 +1,8 @@
+<p><strong>Login: </strong><%=h @user.login %></p>
+<p><strong>Name: </strong><%=h @user.name %></p>
+<p><strong>Email: </strong><%=h @user.email %></p>
+<p><strong>Image: </strong><img src="<%=h url_for(:action => :showimagectlr, :id => @user.id) %>"/> </p>
+<br/>
+<%= link_to 'Edit', edit_user_path(@user) %>
+|
+<%= link_to 'Back', users_path %>

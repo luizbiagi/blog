@@ -1,0 +1,28 @@
+<h1>Listing blogs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Icon</th>
+    <th>Template</th>
+  </tr>
+
+<% for blog in @blogs %>
+  <tr>
+    <td><%=h blog.name %></td>
+    <td><%=h blog.address %></td>
+    <td><%=h blog.description %></td>
+    <td><%=h blog.icon %></td>
+    <td><%=h blog.template_id %></td>
+    <td><%= link_to 'Show', blog %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+    <td><%= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New blog', new_blog_path %>

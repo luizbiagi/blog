@@ -1,0 +1,54 @@
+== Welcome to my newbie Blog System in Rails, this is a project for my university monography. 
+I'm a newbie in Rails, Object-Oriented Programming and also Web-Programming, I work as a COBOL Mainframe programmer, completely different area. 
+I just started in this new PC/WEB area, and I'm sure that's the future, I hope get some help here.
+
+================================================================================================================
+
+Basically my idea is something like this (consider as a textual class diagram please):
+=> User login:string name:string email:string crypted_password:string salt:string image:binary created_at:datetime updated_at:datetime remember_token:string remember_token_expires_at:datetime
+-Want use Restful_Authentication plugin here, also upload a picture for the user
+
+=> Blog name:string address:string description:text icon:binary template_id:references
+-Icon to be used as Favicon in the blog, also use some CSS already build like Zen Garden's CSS
+
+=> BlogUser blog_id:references user_id:references level:integer
+-Level for the user (Integer 1 byte):
+9 - System Owner
+8 - Power Admin
+7 - Admin
+6 - Moderator ( 9 to 6 will user blog_id = 0 because they have to control every blog and every user, maybe to avoid forbidden stuff like pornography or piracy or spam)
+5 - reserved for the future
+4 - Blog Owner 
+3 - Blog Post Member
+2 - Banished from Blog (maybe for spammers)
+1 - Banished from system (also using blog_id = 0)
+-Users without level can only comment, only logged users could comment
+
+=> Template name:string css:string
+-Built CSS just for the blogs
+
+=> Post blog_id:references user_id:references title:string body:text
+
+=> Category name:string
+
+=> CategoryPost category_id:references post_id:references
+
+=> Comment post_id:references user_id:references body:text
+
+================================================================================================================
+
+Well that's the idea, I hope you help me 8D
+I don't know why, but I can't commit the restful_authentication plugin into my repository.
+
+Using the gems:
+-RMagick
+-will_paginate
+until now
+
+Using the plugins:
+-restful_authentication
+until now too
+
+Luiz Biagi 
+Rails Beginner
+luizbiagi (at) gmail (dot) com

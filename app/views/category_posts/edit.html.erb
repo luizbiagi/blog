@@ -1,0 +1,20 @@
+<h1>Editing category_post</h1>
+
+<% form_for(@category_post) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.label :post_id %><br />
+    <%= f.text_field :post_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @category_post %> |
+<%= link_to 'Back', category_posts_path %>

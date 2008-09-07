@@ -1,0 +1,16 @@
+<h1>Listing Users</h1>
+<!-- don't know what to use here -->
+<%#= error_messages_for :users %>
+<table>
+<% for user in @users %>
+  <tr><td rowspan="4"><img src="<%=h url_for(:action => :showimagectlr, :id => user.id) %>"/></td></tr>
+    <tr><td class="listing"><h2><%=h user.name %></h2></td></tr>
+    <tr><td><%=h user.login %></td></tr>
+    <tr><td><%=  link_to 'Show', user %>
+            <%= (link_to 'Edit', edit_user_path(user)) unless current_user.login != user.login %>
+            <%= (link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete) unless current_user.login != user.login %></td></tr>
+<% end %>
+</table>
+<br />
+<%= will_paginate @users %>
+<%= link_to 'New user', new_user_path %>

@@ -1,0 +1,24 @@
+<h1>Listing blog_users</h1>
+
+<table>
+  <tr>
+    <th>Blog</th>
+    <th>User</th>
+    <th>Level</th>
+  </tr>
+
+<% for blog_user in @blog_users %>
+  <tr>
+    <td><%=h blog_user.blog_id %></td>
+    <td><%=h blog_user.user_id %></td>
+    <td><%=h blog_user.level %></td>
+    <td><%= link_to 'Show', blog_user %></td>
+    <td><%= link_to 'Edit', edit_blog_user_path(blog_user) %></td>
+    <td><%= link_to 'Destroy', blog_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New blog_user', new_blog_user_path %>

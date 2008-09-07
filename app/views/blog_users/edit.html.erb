@@ -1,0 +1,24 @@
+<h1>Editing blog_user</h1>
+
+<% form_for(@blog_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :blog_id %><br />
+    <%= f.text_field :blog_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @blog_user %> |
+<%= link_to 'Back', blog_users_path %>

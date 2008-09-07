@@ -1,0 +1,13 @@
+<p>
+  <b>Namestyle:</b>
+  <%=h @template.namestyle %>
+</p>
+
+<p>
+  <b>Contentfile:</b>
+  <%=h @template.contentfile %>
+</p>
+
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
